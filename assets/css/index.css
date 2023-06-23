@@ -1,0 +1,15 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(40, 40, 40);
+}
+
+h1 {
+    color: whitesmoke
+}
+
+h2 {
+    color: rgb(240, 255, 60);
+}
