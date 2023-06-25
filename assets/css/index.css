@@ -4,12 +4,39 @@
 
 body {
     background: rgb(40, 40, 40);
+    
 }
 
 h1 {
-    color: whitesmoke
+    font-size:400%;
+    color: whitesmoke;
+    text-align:center;
+    
 }
 
 h2 {
+    font-size:200%;
     color: rgb(240, 255, 60);
+    text-align:center;
+}
+
+h3{
+    font-size:150%;
+    color:white;
+    text-align: center;
+}
+
+p{
+    font-size:100%;
+    margin-left:30%;
+    margin-right:30%;
+    color: rgb(202, 202, 202)
+}
+
+a{
+    color: rgb(152, 231, 5)
+}
+
+#centered{
+    text-align:center;
 }
