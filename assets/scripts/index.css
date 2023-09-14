@@ -1,0 +1,83 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* https://stackoverflow.com/questions/5387576/css-margin-0-is-not-setting-to-0 */
+    padding:0;
+    margin:0;
+    background: rgb(22, 23, 23);
+    
+}
+
+h1 {
+    font-size:430%;
+    color: rgb(99, 210, 151);
+    text-align:center;
+    
+}
+
+h2 {
+    font-size:200%;
+    color: #63d297;
+    text-align:center;
+}
+
+h3{
+    font-size:140%;
+    color:rgb(99, 210, 151);
+    text-align: center;
+}
+
+p{
+    font-size:100%;
+    margin-left:30%;
+    margin-right:30%;
+    color: rgb(99, 210, 151)
+}
+
+a{
+    color: rgb(99, 210, 151)
+}
+
+b{
+    color: rgb(0, 145, 255)
+}
+
+#centered{
+    text-align:center;
+}
+
+/* https://www.w3schools.com/howto/howto_js_topnav.asp */
+.topnav{
+     overflow:hidden;
+     background-color:rgb(12, 12, 12);
+}
+
+.topnav div{
+    margin: 0;
+    padding: 0;
+}
+
+.topnav li{
+    list-style-type:none;  /*https://getcssscan.com/blog/how-to-remove-bullets-from-li-css#:~:text=To%20remove%20bullets%20from%20a,type%3A%20none%20to%20your%20code.&text=This%20code%20targets%20the%20CSS,li%20and%20ul%20with%20CSS. */
+    display:inline;
+    padding:0;
+    margin:0;  /*https://stackoverflow.com/questions/22207973/how-do-i-remove-this-newline-before-the-ul-starts*/
+    padding-left:30px;
+    font-size:170%;
+}
+
+.topnav a{
+    float:left;
+    margin:0px 25px 0px 0px;
+    text-decoration:none;
+}
+
+.topnav a:hover{
+    color:rgb(30, 225, 200);
+}
+
+.topnav a:active{
+    color:black;
+}
