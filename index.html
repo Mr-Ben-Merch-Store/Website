@@ -29,16 +29,14 @@ SOFTWARE. -->
     <link rel="icon" type="image/x-icon" href="/Website/favicon.ico">
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/scripts/index.js" defer></script>
+    <script src="loadHtml.js"></script>
 </head>
 <body>
 
     <!-- Topnav -->
-    <div class="topnav">
-        <ul>
-            <li><a class="topnav" href="index.html">Home</a></li>
-            <li><a class="topnav" href="about.html">About</a></li>
-        </ul>
-    </div>
+    <div id="topnav"></div>
+    <script>loadHtml('topnav', 'topnav.html');</script>
+
     <!-- Welcome -->
     <h1>Welcome to the Mr. Ben Merch Store</h1>
     <hr size="10px" color="#63d297">
