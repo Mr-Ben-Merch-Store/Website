@@ -26,4 +26,4 @@ The first actual piece of code should always be the topbar, which has it's own f
 
 Remember, you can ask anyone listed as a contributor for help with anything, although it's pretty easy to just copy the layout and theme from other pages.
 
-This utilizes the MIT Liscense, so you can practically do anything with this code.
+This utilizes the MIT License, so you can practically do anything with this code.
