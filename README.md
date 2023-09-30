@@ -8,7 +8,7 @@ View the website here: https://mr-ben-merch-store.github.io/Website/
 # Want to contribute?
 Make sure to keep a consistent color scheme throughout the website. RGB values for the background are 22, 23, 23. RGB values for font are 99, 210, 151.
 
-When creating any new pages, make sure to use <h1> for the main title/text (like "About" on the about page), this will also give it the bouncing animation.
+When creating any new pages, make sure to use h1 for the main title/text (like "About" on the about page), this will also give it the bouncing animation.
 
 Also make sure any new pages are added to topnav.html (this excludes individual merch pages).
 
@@ -26,4 +26,4 @@ The first actual piece of code should always be the topbar, which has it's own f
 
 Remember, you can ask anyone listed as a contributor for help with anything, although it's pretty easy to just copy the layout and theme from other pages.
 
-This utilizes the MIT Liscense, so you can practically do anything with this code.
+This utilizes the MIT License, so you can practically do anything with this code.
