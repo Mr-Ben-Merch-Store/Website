@@ -217,3 +217,13 @@ b {
 .topnav a:hover {
         color: rgb(30, 225, 200);
 }
+
+.topnav ol {
+        float:right;
+        /*https://getcssscan.com/blog/how-to-remove-bullets-from-li-css#:~:text=To%20remove%20bullets%20from%20a,type%3A%20none%20to%20your%20code.&text=This%20code%20targets%20the%20CSS,li%20and%20ul%20with%20CSS. */
+        display: inline;
+        padding: 0px 0px 0px 10px;
+        margin-right: 1%;
+        /*https://stackoverflow.com/questions/22207973/how-do-i-remove-this-newline-before-the-ul-starts*/
+        padding-right: 0px;
+}
