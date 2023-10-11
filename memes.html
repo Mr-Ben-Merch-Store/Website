@@ -6,16 +6,13 @@
     <title>Memes</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/scripts/index.js" defer></script>
+    <script src="loadHtml.js"></script>
 </head>
 <body>
     <!-- Topnav -->
-    <div class="topnav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </div>
-    <!-- Welcome -->
+    <div id="topnav"></div>
+    <script>loadHtml('topnav', 'topnav.html');</script>
+
     <h1>Congradulations! You found the meme webpage!</h1>
     <h2>Great job buddy!</h2>
     <p style="word-wrap: break-word;">
@@ -24,8 +21,8 @@
     </p>
     <br>
     <p>
-        Hint: CODE CHEF?!
+        Hint: CYBER CHEF?!
     </p>
-    <img id="mrben" src="assets/images/MRBENLIVEREACTION.png" width="900px">
+    <img id="mrben" src="assets/images/MRBENLIVEREACTION.png" width="800px" align="center">
 </body>
 </html>

@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="icon" type="image/x-icon" href="/Website/favicon.ico">
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/scripts/index.js" defer></script>
+    <script src="loadHtml.js"></script>
+
 </head>
 <body>
     <!-- Topnav -->
-    <div class="topnav" style="padding-left:0px; margin-left:0px">
-        <ul>
-            <li><a class="topnav" href="index.html">Home</a></li>
-            <li><a class="topnav" href="about.html">About</a></li>
-        </ul>
-    </div>
-
+    <div id="topnav"></div>
+    <script>loadHtml('topnav', 'topnav.html');</script>
+    
     <h1>About</h1>
     <hr size="10px" color="#63d297">
 
@@ -34,5 +33,3 @@
     
 </body>
 </html>
-<!-- Lunar was here -->
-<!--    01000101    -->
