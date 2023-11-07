@@ -16,7 +16,9 @@ Remember, you can ask anyone listed as a contributor for help with anything, alt
 
 This utilizes the MIT License, so you can practically do anything with this code.
 
-## Setting up development (locally)
+## Setting up development
+
+### Locally
 
 First of all, you need to install [Node.js](https://nodejs.org/en) from its website. There are instructions for all platforms (Windows, Mac, Linux), and it's easy to find help if necessary.
 
@@ -41,7 +43,7 @@ To start the development server so you can see what changes you are making, run 
 pnpm dev
 ```
 
-Go to [http://localhost:3000](http://localhost:3000) to see the development server running (or click on the link in the terminal). If running on Codespaces, click on the link generated in the terminal.
+Go to [http://localhost:3000](http://localhost:3000) to see the development server running (or click on the link in the terminal).
 
 ## Main technologies used
 
