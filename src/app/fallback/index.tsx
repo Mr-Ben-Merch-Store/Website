@@ -1,19 +1,31 @@
-import type { InferGetStaticPropsType,GetStaticProps } from "next";
-import { detectContentType } from "next/dist/server/image-optimizer";
+import type {
+    InferGetStaticPropsType,
+    GetStaticProps,
+    GetStaticPaths,
+  } from 'next'
+   
+  type File = {
+    Content : string
+  }
+   
+  export const getStaticPaths = (async () => {
+    return {
+      paths: [
+        {
+          params: {
+            name: 'error.txt',
+          },
+        },
+      ],
+      fallback: true,
+    }
+  }) satisfies GetStaticPaths
+   
+  export const getStaticProps = (async (context) => {
+    const res = await fetch('https://api.github.com/repos/stylo-codes-stuff/Mr-bens-merch-store-website/contents/src/app/fallback/fallback.txt')
+    const repo = await res.json()
+    return { props: { repo } }
+  }) satisfies GetStaticProps<{
+    repo: File
+  }>
 
-type file ={
-    content: string
-}
-export const getStaticProps = (async (context)=>{
-    const req = await fetch("./error.txt")
-    const res = await req.text()
-    return{props:{res}}
-}) satisfies GetStaticProps<{
-    res:file
-}>
-
-export default function Page({
-    res,
-}: InferGetStaticPropsType<typeof getStaticProps>){
-    return res.content
-}
