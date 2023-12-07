@@ -28,4 +28,9 @@ import type {
   }) satisfies GetStaticProps<{
     repo: File
   }>
+  export default function Page({
+    repo,
+  }:InferGetStaticPropsType<typeof getStaticProps>){
+    return repo.content
+  }
 

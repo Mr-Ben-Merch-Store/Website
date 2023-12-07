@@ -15,7 +15,7 @@ export default function Navbar() {
                         <Link href="/about">About</Link>
                     </li>
                     <li>
-                        <Link href="/fallback">Contributors </Link>
+                        <Link href="/fallback.txt">Contributors </Link>
                     </li>
                 </div>
 
