@@ -14,6 +14,9 @@ export default function Navbar() {
                     <li>
                         <Link href="/about">About</Link>
                     </li>
+                    <li>
+                        <Link href="/store">Store</Link>
+                    </li>
                 </div>
 
                 <li>
@@ -21,6 +24,8 @@ export default function Navbar() {
                         <ShoppingCartIcon className="w-10 h-10" />
                     </Link>
                 </li>
+
+                
             </ul>
         </nav>
     );
