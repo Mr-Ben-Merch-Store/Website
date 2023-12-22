@@ -1,7 +1,7 @@
 {
     "products":[
-        [{"name":"Flags", "img":"/MRBENLIVEREACTION.png","content": "Coming Soon!"},
-    {"name":"Stickers","img":"/MRBENLIVEREACTION.png", "content": "Coming Soon!"},
-{"name":"Shirts","img":"/MRBENLIVEREACTION.png", "content":"Coming Soon!"}]
+        [{"name":"Flags", "img":"/product images/shirt1.png","content": "Coming Soon!", "imgsize":50},
+    {"name":"Stickers","img":"/product images/sticker1.png", "content": "Coming Soon!", "imgsize":50},
+{"name":"Shirts","img":"/product images/BenShwarma.png", "content":"Coming Soon!", "imgsize":50}]
     ]
 }
