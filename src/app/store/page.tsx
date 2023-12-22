@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function store() {
     var p = products.products;
     var products_load = p.map((item, index) => (item.map((item1, index1) =>
-    <div className="container mx-auto px-0" key={index}>
+    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={index}>
         <h2>{item1.name}</h2>
 
         <Image 
