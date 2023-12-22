@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 
 export default function store() {
     var p = products.products;
-    var products_load = p.map((item, index) => (item.map((item1, index1) =>
+    var products_load = <div>{p.map((item, index) => (item.map((item1, index1) =>
     <div>
         <h2>{item1.name}</h2>
     </div>
-    )));
+    )))}</div>;
 
     var html = (
         <> 
