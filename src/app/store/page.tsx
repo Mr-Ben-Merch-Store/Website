@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import products from './products.json';
+import products from '../../../public/products.json';
 
 export const metadata: Metadata = {
     title: 'Store',
