@@ -9,14 +9,14 @@ export const metadata: Metadata = {
 export default function store() {
     var p = products.products;
     var products_load = p.map((item, index) => (item.map((item1, index1) =>
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={index}>
+    <div className="max-w-sm max-h-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-10" key={index}>
         <h2>{item1.name}</h2>
 
         <Image 
                         alt="Mr. Ben Live Reacting"
                         width="100"
                         height="100"
-                        className="object-contain hover:object-scale-down"
+                        className="object-contain hover:object-none"
                         src={item1.img}/>
         <p>{item1.content}</p>
     </div>
@@ -25,7 +25,7 @@ export default function store() {
     var html = (
         <> 
             <h1>Store</h1>
-            <div>
+            <div className="flex row-auto">
             {products_load}
             </div>
         </>
