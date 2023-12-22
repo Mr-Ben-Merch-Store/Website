@@ -1,6 +1,7 @@
 {
     "products":[
-        [{"name":"Flag","content": "<h1>Coming Soon</h1>"},
-    {"name":"Sticker"}]
+        [{"name":"Flag", "img":"/MRBENLIVEREACTION.png","content": "Coming Soon!"},
+    {"name":"Sticker","img":"/MRBENLIVEREACTION.png", "content": "Coming Soon!"},
+{"name":"Shirts","img":"/MRBENLIVEREACTION.png", "content":"Coming Soon!"}]
     ]
 }
