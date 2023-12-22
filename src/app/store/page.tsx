@@ -25,7 +25,7 @@ export default function store() {
     var html = (
         <> 
             <h1>Store</h1>
-            <div className="flex row-auto">
+            <div className="flex row-auto justify-center">
             {products_load}
             </div>
         </>

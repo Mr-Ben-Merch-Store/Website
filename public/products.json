@@ -1,7 +1,7 @@
 {
     "products":[
-        [{"name":"Flag", "img":"/MRBENLIVEREACTION.png","content": "Coming Soon!"},
-    {"name":"Sticker","img":"/MRBENLIVEREACTION.png", "content": "Coming Soon!"},
+        [{"name":"Flags", "img":"/MRBENLIVEREACTION.png","content": "Coming Soon!"},
+    {"name":"Stickers","img":"/MRBENLIVEREACTION.png", "content": "Coming Soon!"},
 {"name":"Shirts","img":"/MRBENLIVEREACTION.png", "content":"Coming Soon!"}]
     ]
 }
