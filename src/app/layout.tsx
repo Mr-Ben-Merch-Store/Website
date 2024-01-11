@@ -20,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </a>
                     <Navbar />
                 </header>
-                <BottomBar/>
                 <main className="text-center mt-12">{children}</main>
 
                 <BottomBar/>

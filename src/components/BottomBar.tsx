@@ -5,7 +5,7 @@ import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 export default function Bottombar() {
     return (
-        <nav className="bg-zinc-950 p-4 static bottom-0 left-0 right-0 z-5  w-full">
+        <nav className="absolute bg-zinc-950 p-4 static bottom-0 left-0 right-0 z-5 w-full">
             <ul className="flex justify-between text-emerald-400 mx-10">
                 <div className="flex items-center space-x-6 ">
                     <li>
