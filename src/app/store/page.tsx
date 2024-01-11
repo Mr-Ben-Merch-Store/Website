@@ -12,9 +12,8 @@ export default function store() {
     return (
         <> 
             <h1>Store</h1>
-            <div className="flex row-auto justify-center">
+            
             <ShopCard></ShopCard>
-            </div>
         </>
     );
 
