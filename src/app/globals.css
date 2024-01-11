@@ -22,6 +22,9 @@ p {
     @apply text-emerald-400;
     margin: 50px;
 }
+footer {
+    @apply text-emerald-400;
+}
 p a{
     color:aquamarine;
 }
