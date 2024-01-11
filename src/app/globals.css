@@ -20,4 +20,8 @@ h3 {
 
 p {
     @apply text-emerald-400;
+    margin: 50px;
+}
+p a{
+    color:aquamarine;
 }
