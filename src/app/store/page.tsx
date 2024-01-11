@@ -16,7 +16,7 @@ export default function store() {
                         alt="Mr. Ben Live Reacting"
                         width="400"
                         height="400"
-                        className="object-contain hover:object-none"
+                        className="object-contain"
                         src={item1.img}/>
         <p>{item1.content}</p>
     </div>
