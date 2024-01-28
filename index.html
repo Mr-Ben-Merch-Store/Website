@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- SCROLL ALL THE WAY DOWN TO EDIT STORE -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. Ben-Yaakov Merch</title>
+  <style>
+    a {
+      color: black;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    @keyframes textShow {
+      from {
+        color: red;
+      }
+
+      to {
+        color: #000;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+    }
+
+    button {
+      font-family: 'Space Mono', monospace;
+      animation-name: textShow;
+      animation-duration: 4s;
+      background-color: red;
+      border: none;
+    }
+
+    button:hover {
+      color: white;
+    }
+
+    button:active {
+      color: red;
+    }
+
+    #contentContainer {
+      color: white;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    #textBig {
+      font-size: 250%;
+    }
+
+    #textSmall {
+      font-size: 90%;
+      text-align: center;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+      position: relative;
+    }
+
+    .redBox {
+      width: 100vw;
+      background-color: red;
+      left: 0;
+      transition: top 1s ease;
+      z-index: 1;
+    }
+
+    #redBoxTop {
+      position: relative;
+      height: 100vh;
+      top: 0;
+    }
+
+    #redBoxBottom {
+      position: fixed;
+      height: 6vh;
+      border-radius: 8px;
+      bottom: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    #blackBox {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100vh;
+      background-color: red;
+      z-index: 3;
+      overflow: hidden;
+      transition: width 0.5s ease;
+    }
+
+    #spinGifContainer {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      display: none;
+      border: 2px solid black;
+      padding: 1px;
+      transition: top 1s ease;
+    }
+
+    #spinGif {
+      max-width: 100%;
+    }
+
+    .btn {
+      color: black;
+      color: #000;
+    }
+
+    #waveContainer {
+      position: absolute;
+      top: 40%;
+      left: 200%;
+      size: 30%;
+      height: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: block;
+      transition: left 1s ease;
+      padding: 1px;
+    }
+
+    #waveGif {
+      max-width: 100%;
+    }
+
+
+
+
+
+    .sample-text {
+      position: absolute;
+      bottom: -6%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      z-index: 6;
+      font-family: 'Space Mono', monospace;
+    }
+
+
+
+    #shirtContainer {
+      text-align: center;
+      position: absolute;
+      top: -300%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-height: 80vh;
+      overflow-y: auto;
+      transition: top 0.5s ease;
+    }
+
+
+    #aboutContainer {
+      position: absolute;
+      z-index: 8;
+      transition: left 0.5s ease;
+      top: -4%;
+      text-align: left;
+      left: 200%;
+      color: black;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+    #storeTextContainer {
+      position: absolute;
+      z-index: 8;
+      transition: left 0.5s ease;
+      top: -4%;
+      text-align: left;
+      left: 200%;
+      color: black;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .posAbs {
+      position: absolute;
+    }
+
+    .rounded-rectangle {
+      position: relative;
+      width: 200px;
+      height: 280px;
+      background-color: #000;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 6;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="store.js"></script>
+  <div id="redBoxTop" class="redBox"></div>
+  <div id="redBoxBottom" class="redBox">
+    <button onclick="buttonClick(1)" class="btn">home</button>
+    <button onclick="buttonClick(2)" class="btn">shop</button>
+    <button onclick="buttonClick(3)" class="btn">about</button>
+  </div>
+
+  <div id="blackBox"></div>
+
+  <div id="spinGifContainer">
+    <img id="spinGif" src="./assets/spin.gif" alt="Spin GIF">
+    <p><br>loading...</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var spinGifContainer = document.getElementById("spinGifContainer");
+      spinGifContainer.style.display = "block";
+      var redBoxTop = document.getElementById("redBoxTop");
+      var redBoxBottom = document.getElementById("redBoxBottom");
+      var waveContainer = document.getElementById("waveContainer");
+      setTimeout(function () {
+        spinGifContainer.style.top = "-150vh";
+        redBoxTop.style.top = "-100vh";
+        waveContainer.style.left = "80%";
+      }, 4000);
+    });
+
+    function buttonClick(buttonNumber) {
+      var blackBox = document.getElementById("blackBox");
+
+      switch (buttonNumber) {
+        case 1:
+          blackBox.style.width = "0%";
+          shirtContainer.style.top = "-300%";
+          aboutContainer.style.left = "200%";
+          storeTextContainer.style.left = "200%";
+          break;
+        case 2:
+          blackBox.style.width = "100%";
+          shirtContainer.style.top = "50%";
+          aboutContainer.style.left = "200%";
+          storeTextContainer.style.left = "50%";
+          break;
+        case 3:
+          blackBox.style.width = "100%";
+          shirtContainer.style.top = "-300%";
+          aboutContainer.style.left = "50%";
+          storeTextContainer.style.left = "200%";
+          break;
+      }
+    }
+  </script>
+<div id = "storeTextContainer">
+    <p id="textBig" class="posAbs"><b>Shop</b></p>
+
+</div>
+  <div id="aboutContainer">
+    <p id="textBig" class="posAbs"><b>About</b></p>
+    <p id="textSmall" class="posAbs"><br><br><br><br><br><b>What is the Mr. Ben Merch Store?</b><br>The Mr. Ben Merch
+      store is created by students for students. The Merch Store provides funds to the Computer Science Club as a whole.
+      All merch is to follow school rules. If you wish to contribute, please join our discord server.<br><br>Current
+      club
+      president: <b>Julian</b><br><br>Current club vice president: <b>James</b><br><br><a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSf6iXstrTxNUmbAa-qJzJ3uC-TM6Z5IR7FIXPfo379ju6VaBg/viewform?vc=0&c=0&w=1&flr=0">Interested
+        in our merch store? Fill out this interest form!</a></p>
+  </div>
+  <div id="contentContainer">
+    <p id="textBig">Mr. Ben-Yaakov</p>
+    <p id="textSmall">The of Computer Teacher Science All Time</p>
+  </div>
+
+  <div id="waveContainer">
+    <img id="waveGif" src="./assets/wave.gif" alt="Wave GIF">
+  </div>
+
+
+  <div id="shirtContainer">
+    
+
+
+
+
+
+    <!-- COPY THE FOLLOWING CODE TO MAKE NEW ITEM -->
+
+
+    <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+    <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+    <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+    <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+        <a href="https://stripe.com" target="_blank" rel="noopener noreferrer"> <!-- EDIT URL ON THIS LINE -->
+      <style>
+        .shirt-image-1 {
+          position: relative;
+          width: 100%;
+          height: 75%;
+          background: url('./assets/shirt-template-front.png') center/cover no-repeat;
+          /*ENTER FRONT ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          transition: background 0.3s ease;
+          z-index: 6;
+          border-radius: 10px;
+
+        }
+
+        .rounded-rectangle:hover .shirt-image-1 {
+          background: url('./assets/shirt-template-back.png') center/cover no-repeat;
+          /*ENTER BACK ITEM PIC ON THIS LINE*/
+          background-size: 100%;
+          z-index: 6;
+        }
+      </style>
+      <div class="rounded-rectangle">
+        <div class="shirt-image-1"></div> <!-- CHANGE NAME TO CORRESPONDING CSS -->
+        <p class="sample-text">Placeholder<br>Text</p> <!-- CHANGE NAME TO ITEM NAME -->
+      </div>
+    </a>
+    <!-- PASTE ABOVE THIS -->
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>
