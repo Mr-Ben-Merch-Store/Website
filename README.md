@@ -1,5 +1,5 @@
-# mr ben-yaakov merch store by eshnd
-This is a remake of the Mr. Ben merch store website. It's made entirely in basic HTML, CSS, and JS. Originally, in an attempt to incorporate 3D elements, it was going to be made in React and Spline, but due to complications, as well as some performance issues, we decided to make it in DHTML.  
+# my take on the mr ben merch store website
+This is a remake of the Mr. Ben merch store website. It's made entirely in basic HTML, CSS, and JS. Originally, in an attempt to incorporate 3D elements, it was going to be created in React and Spline, but due to me being dumb, as well as some performance issues, I decided to make it in DHTML.
 
 # advantages  
 - It's easy to run and edit  
