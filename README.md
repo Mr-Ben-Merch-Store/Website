@@ -8,6 +8,6 @@ This is a remake of the Mr. Ben merch store website. It's made entirely in basic
 - There is only need for 1 file of code
 
 # disadvantages
-- The animations don't look perfect (It'll be fixed by Monday)
+- The animations don't look perfect (It'll be fixed by Tuesday night)
 - _index.html_ is overcomplicated and disorganized
 - No shopping cart yet 
