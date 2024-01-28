@@ -1,4 +1,5 @@
 # my take on the mr ben merch store website
+IM JUST PUSHING THIS TO SAY THAT I TRIED, I KNOW IT WILL BE REJECTED CUZ I WAS DUMB AND FORGOT TO USE NEXT.JS AND STUFF  
 This is a remake of the Mr. Ben merch store website. It's made entirely in basic HTML, CSS, and JS. Originally, in an attempt to incorporate 3D elements, it was going to be created in React and Spline, but due to me being dumb, as well as some performance issues, I decided to make it in DHTML.
 
 # advantages  
