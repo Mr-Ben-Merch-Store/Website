@@ -16,13 +16,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         className="text-center underline text-emerald-400 bg-emerald-900 block p-3 text-lg"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSf6iXstrTxNUmbAa-qJzJ3uC-TM6Z5IR7FIXPfo379ju6VaBg/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"
                     >
-                        Interested in our merch store? Fill out this interest form!
+                        Interested in our Merch store? Fill out this interest form!
                     </a>
                     <Navbar />
                 </header>
-                <main className="text-center mt-12">{children}</main>
+                <main className="text-center mt-12 min-h-screen">{children}</main>
 
-                <BottomBar/>
+                <div className="">
+                    <BottomBar />
+                </div>
             </body>
         </html>
     );

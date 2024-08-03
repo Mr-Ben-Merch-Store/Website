@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function shirts(){
     return (
         <>
+        <h1>Hi</h1>
         </>
     )
 }
