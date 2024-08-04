@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import BottomBar from '@/components/BottomBar';
+import Navbar from '@/app/components/Navbar';
+import BottomBar from '@/app/components/BottomBar';
 export const metadata: Metadata = {
     title: 'BenMerch',
     description: 'Created by the Mr. Ben Merch Store Club',
