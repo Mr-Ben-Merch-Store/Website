@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
 var jwt = require('jsonwebtoken');
 
 export async function POST(req: Request) {
@@ -14,8 +13,9 @@ export async function POST(req: Request) {
             },
             process.env.JWT_KEY_SIGNATURE
         );
+
         cookies().set('admin_token', token); // Set the token to the admin's username but JWT encoded so that we can auth them for other admin pages
-        return Response.json({ loggedIn: true });
+        return Response.json({ loggedIn: true }); // For the redirect
     }
 
     return Response.json({ loggedIn: false });
