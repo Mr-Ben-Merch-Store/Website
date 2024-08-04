@@ -1,3 +1,7 @@
+/*
+This file is for the client side login that sends a post request 
+to get access to the dashboard. See ../dashboard/.
+*/
 'use client';
 import { useState } from 'react';
 import { FormEvent } from 'react';
@@ -20,9 +24,11 @@ export default function About() {
         const data = await response.json();
 
         if (!data.loggedIn) {
+            // If the post request returns that the user did not log in, it sets the <p> element to notify the user
+            // Note: The above has nothing to do with security and is just used for redirecting the user (A JWT token is used instead in middleware to detect login)
             setInvalid(true);
         } else {
-            push('/dashboard');
+            push('/dashboard'); // If the user logged in, redirect to the dashboard
         }
     }
     return (

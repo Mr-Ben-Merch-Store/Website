@@ -5,6 +5,14 @@ import BottomBar from '@/app/components/BottomBar';
 export const metadata: Metadata = {
     title: 'BenMerch',
     description: 'Created by the Mr. Ben Merch Store Club',
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mr. Ben Merch Store',
+        description: 'The website helps provide funds to the Allen CS club.',
+        creator: 'Merch Store Club',
+        images: ['https://www.bensmerch.org/favicon.ico'], // Must be an absolute URL
+    },
+    metadataBase: new URL('https://bensmerch.org'),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
