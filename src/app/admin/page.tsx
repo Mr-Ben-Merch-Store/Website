@@ -32,11 +32,23 @@ export default function About() {
                 onSubmit={onSubmit}
                 className="flex flex-col m-10 p-10 items-center align-center"
             >
-                <label>Username</label>
-                <input name="username" className="m-5" type="text" />
-                <label>Password</label>
-                <input name="password" className="m-5" type="text" />
-                <input type="submit" value="Submit" />
+                <label className="text-xl text-green-400">Username</label>
+                <input
+                    name="username"
+                    className="m-5 rounded border-white text-white bg-black p-2 transition ease-in-out delay-75 hover:text-black hover:bg-zinc-50 hover:border-black duration-150"
+                    type="text"
+                />
+                <label className="text-xl text-green-400">Password</label>
+                <input
+                    name="password"
+                    className="m-5 rounded border-white text-white bg-black p-2 transition ease-in-out delay-75 hover:text-black hover:bg-zinc-50 hover:border-black duration-150"
+                    type="text"
+                />
+                <input
+                    type="submit"
+                    className="border border-white rounded p-3 bg-black text-white m-2"
+                    value="Submit"
+                />
             </form>
 
             {showInvalid && <p className="">Invalid Credentials!</p>}
