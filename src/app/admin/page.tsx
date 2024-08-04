@@ -13,8 +13,6 @@ export default function About() {
                 password: formData.get('password'),
             }),
         }); // Send a response to the api at /api/admin (where authentication is handled)
-
-        const data = await response.json();
     }
     return (
         <>
