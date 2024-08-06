@@ -19,9 +19,9 @@ export default function About() {
                 </p>
                 <h2>Club Leadership</h2>
                 <h3>Current Club President</h3>
-                <p>Julian</p>
+                <p>Julian Thomas</p>
                 <h3>Current Club Vice President</h3>
-                <p>James</p>
+                <p>Armaan Ansari</p>
             </div>
         </>
     );
