@@ -15,6 +15,15 @@ const config: Config = {
             },
             colors: {
                 theme: '#63d297',
+                bgBase: '#000000',
+                bgDim: '#083331',
+                bgMid: '#0F4948',
+                bgLight: '#196660',
+                textDark: '#2F9987',
+                textDim: '#51CCA6',
+                textMid: '#6BE3B1',
+                textLight: '#7EFFC3'
+                
             },
             fontFamily: {
                 sans: [
