@@ -1,0 +1,7 @@
+{
+    "products":[
+        [{"name":"Flags", "img":"/product images/shirt1.png","content": "Coming Soon!", "imgsize":50},
+    {"name":"Stickers","img":"/product images/sticker1.png", "content": "Coming Soon!", "imgsize":50},
+    {"name":"Shirts","img":"/product images/BenShwarma.png", "content":"Coming Soon!", "imgsize":50, "subpages":{"Minecraft Shirt":{"price_in_dollars":25, "description":"Made by Stylo in minecraft using his epic datapack! Check it out <a href='https://github.com/stylo-codes-stuff/image2block'>here</a>"}}}]
+    ]
+}

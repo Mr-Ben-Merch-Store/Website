@@ -3,21 +3,27 @@
 @tailwind utilities;
 
 h1 {
-    @apply font-semibold text-7xl text-white my-20 animate-bounce-in;
+    @apply font-semibold text-7xl text-white animate-bounce-in my-10;
 }
 
-h1 + hr {
-    @apply bg-emerald-400 h-3 border-none mb-10;
+hr {
+    @apply bg-textMid h-1 border-none;
 }
 
 h2 {
-    @apply font-semibold text-emerald-400 text-4xl my-8;
+    @apply font-semibold text-white text-4xl my-10;
 }
 
 h3 {
-    @apply text-emerald-400 text-2xl my-6;
+    @apply text-slate-300 text-2xl mt-5;
 }
 
 p {
-    @apply text-emerald-400;
+    @apply text-textDim;
+}
+footer {
+    @apply text-bgLight;
+}
+p a{
+    color:#B4FFDC;
 }
