@@ -1,3 +1,4 @@
+/*  This file is used for authenticating for the Admin page and giving a token */
 import { cookies } from 'next/headers';
 import { SignJWT } from 'jose';
 

@@ -18,6 +18,7 @@ export async function middleware(request: NextRequest) {
                     }
                 );
                 if (payload.username == process.env.ADMIN_USER) {
+                    // See if the payload decodes as user
                     return NextResponse.next();
                 }
             } catch (error) {
