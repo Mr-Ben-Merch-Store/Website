@@ -6,8 +6,8 @@ import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 export default function Navbar() {
     return (
         <nav className="bg-zinc-950 p-4">
-            <ul className="flex justify-between text-emerald-400 mx-10">
-                <div className="flex items-center space-x-6 text-2xl">
+            <ul className="flex justify-between text-textLight mx-10">
+                <div className="flex items-center space-x-12 text-2xl">
                     <li>
                         <Link href=".">Home</Link>
                     </li>

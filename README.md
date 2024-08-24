@@ -4,7 +4,7 @@ This is the website for the Mr. Ben Merch store forum in the Computer Science cl
 
 Join our [discord server](https://discord.gg/E8NzVDaAS9)!
 
-View the [website](https://mr-bens-merch-store.vercel.app/)
+View the [website](https://www.bensmerch.org/)
 
 ## Want to contribute?
 
