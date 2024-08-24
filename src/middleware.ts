@@ -3,7 +3,10 @@ import type { NextRequest } from 'next/server';
 import { jwtVerify } from 'jose';
 
 export async function middleware(request: NextRequest) {
-    if (request.nextUrl.pathname.startsWith('/dashboard')) {
+    if (
+        request.nextUrl.pathname.startsWith('/dashboard') ||
+        request.nextUrl.pathname.startsWith('/api/mongo')
+    ) {
         let cookie = request.cookies.get('admin_token');
         if (cookie) {
             try {
