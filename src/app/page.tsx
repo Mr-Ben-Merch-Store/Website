@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <h1>Welcome to the Mr. Ben Merch Store</h1>
             <hr />
-            <h2>Coming Soon!!</h2>
+            <h2 className="my-80 text-textLight">Coming Soon!!</h2>
         </>
     );
 }
