@@ -65,3 +65,5 @@ Here are some documentation links if you want to learn more:
 -   ADMIN_PASS (the password for the admin dashboard)
 -   JWT_KEY_SIGNATURE (the JWT encoding signature that's used to encode user tokens)
 -   PRINTFUL_TOKEN (The token used for the printful store)
+-   MONGO_USER (the login for MongoDB)
+-   MONGO_PASS (the password for the MongoDB)
