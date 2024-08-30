@@ -21,9 +21,11 @@ h3 {
 p {
     @apply text-textDim;
 }
+
 footer {
     @apply text-bgLight;
 }
-p a{
-    color:#B4FFDC;
+
+p a {
+    color: #B4FFDC;
 }
