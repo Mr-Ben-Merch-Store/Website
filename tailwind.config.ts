@@ -38,6 +38,7 @@ const config: Config = {
             },
             animation: {
                 'bounce-in': 'bounce-in-top 1.1s both',
+                'slide-in-left': 'slide-in-left 0.5s ease-out forwards',
             },
             keyframes: {
                 'bounce-in-top': {
@@ -80,6 +81,16 @@ const config: Config = {
                     '100%': {
                         transform: 'translateY(0)',
                         'animation-timing-function': 'ease-out',
+                    },
+                },
+                'slide-in-left': {
+                    '0%': {
+                        transform: 'translateX(-100%)',
+                        opacity: '0',
+                    },
+                    '100%': {
+                        transform: 'translateX(0)',
+                        opacity: '1',
                     },
                 },
             },
