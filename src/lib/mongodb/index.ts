@@ -15,12 +15,16 @@ declare global {
     var __mongoClientProcess: any; // For typescript typing, unrelated to anything else
 }
 
-if (!global.__mongoClientProcess) {
-    global.__mongoClientProcess = client.connect();
-    clientConnection = global.__mongoClientProcess;
+if (process.env.MONGO_USER && process.env.MONGO_PASS) {
+    if (!global.__mongoClientProcess) {
+        global.__mongoClientProcess = client.connect();
+        clientConnection = global.__mongoClientProcess;
+    } else {
+        clientConnection = global.__mongoClientProcess;
+        console.log(typeof global.__mongoClientProcess);
+    }
 } else {
-    clientConnection = global.__mongoClientProcess;
-    console.log(typeof global.__mongoClientProcess);
+    console.log('Not connected to Mongo. Keys not set.');
 }
 
 export default clientConnection;

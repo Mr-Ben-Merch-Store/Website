@@ -2,12 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Keyframe animation for the line growing from the middle to the sides */
+@keyframes hover-line {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.nav-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #63d297;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    animation: hover-line 0.3s forwards;
+}
+
+
 h1 {
     @apply font-semibold text-7xl text-white animate-bounce-in my-10;
 }
 
 hr {
-    @apply bg-textMid h-1 border-none;
+    @apply bg-textMid h-3 border-none;
 }
 
 h2 {
@@ -21,9 +54,34 @@ h3 {
 p {
     @apply text-textDim;
 }
+
 footer {
     @apply text-bgLight;
 }
-p a{
-    color:#B4FFDC;
+
+p a {
+    color: #3392d1;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.scrollable-gallery::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-gallery::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-gallery::-webkit-scrollbar-thumb {
+    background: #63d297;
+    border-radius: 10px;
+}
+
+.scrollable-gallery::-webkit-scrollbar-thumb:hover {
+    background: #5ec28d;
 }
