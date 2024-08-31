@@ -10,12 +10,12 @@ export default function Navbar() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="bg-zinc-950 p-4 relative">
+        <nav className="bg-zinc-950 p-4 relative min-h-[65px]">
             <div className="flex items-center justify-between mx-10">
                 {/* Hamburger Menu */}
                 <button
                     onClick={toggleMenu}
-                    className="lg:hidden absolute left-0 top-1/2 transform -translate-y-1/2 p-2 z-20"
+                    className="lg:hidden absolute left-0 top-1/2 transform -translate-y-1/2 p-2 z-30"
                 >
                     {isOpen ? (
                         <XMarkIcon className="w-10 h-10 text-textLight" />
@@ -26,19 +26,20 @@ export default function Navbar() {
 
                 {/* Desktop Links */}
                 <div className="flex items-center space-x-12 text-2xl text-textLight">
-                    <li className="list-none">
-                        <Link href=".">Home</Link>
+                    <li className="nav-link list-none">
+                        <Link href="/">Home</Link>
                     </li>
-                    <li className="lg:flex hidden">
+                <li className="nav-link hidden lg:block">
                         <Link href="/about">About</Link>
-                    </li>
-                    <li className="lg:flex hidden">
-                        <Link href="/store">Store</Link>
-                    </li>
+                </li>
+                <li className="nav-link hidden lg:block">
+                    <Link href="/store">Store</Link>
+                </li>
+
                 </div>
 
                 {/* Mobile Cart Icon */}
-                <div className="flex items-center lg:hidden absolute right-0 top-1/2 transform -translate-y-1/2 pr-4">
+                <div className="flex items-center lg:hidden absolute right-0 top-1/2 transform -translate-y-1/2 pr-4 z-30">
                     <Link href="/cart">
                         <ShoppingCartIcon className="w-10 h-10 text-textLight" />
                     </Link>
@@ -56,7 +57,7 @@ export default function Navbar() {
             <ul
                 className={`absolute top-16 left-0 bg-zinc-950 ${
                     isOpen ? 'animate-slide-in-left' : 'hidden'
-                } text-textLight transition-all duration-300 ease-in-out z-10 w-auto max-w-xs p-4`}
+                } text-textLight transition-all duration-300 ease-in-out z-20 w-auto max-w-xs p-4`}
             >
                 <li className="py-4 border-b border-gray-700">
                     <Link href="/">Home</Link>
