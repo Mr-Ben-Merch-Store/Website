@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <>
-            <h1>Welcome to Mr.Ben's Merch Store</h1>
+            <h1>Welcome to Mr.Ben&apos;s Merch Store</h1>
             <hr />
             <h2 className="my-20 text-textLight text-center">Concept designs:</h2>
         
