@@ -36,7 +36,7 @@
 
 
 h1 {
-    @apply font-semibold text-7xl text-white animate-bounce-in my-10;
+    @apply font-semibold text-5xl text-white animate-bounce-in my-10;
 }
 
 hr {
