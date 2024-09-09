@@ -28,10 +28,12 @@
     height: 2px;
     background-color: #63d297;
     transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-link:hover::after {
-    animation: hover-line 0.3s forwards;
+    width: 100%;
+    transform: translateX(-50%);
 }
 
 
