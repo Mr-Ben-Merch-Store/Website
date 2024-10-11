@@ -87,3 +87,7 @@ nav ul {
 .scrollable-gallery::-webkit-scrollbar-thumb:hover {
     background: #5ec28d;
 }
+
+* {
+    cursor: none; /* we dont want the pesky old cursor anywhere */
+}
