@@ -2,13 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/app/components/Navbar';
 import BottomBar from '@/app/components/BottomBar';
-import SmoothCursor from '@/app/components/SmoothCursor'; // Import SmoothCursor
 import type { Viewport } from 'next';
 
 export const viewport: Viewport = {
     themeColor: '#ff9b05',
 };
-
 export const metadata: Metadata = {
     title: 'BenMerch',
     description: 'Created by the Mr. Ben Merch Store Club',
@@ -29,10 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <header>
                     <Navbar />
                 </header>
-                
-                {/* SmoothCursor component to enable cursor effect globally */}
-                <SmoothCursor />
-
                 <main className="text-center min-h-screen">{children}</main>
 
                 <div className="">
