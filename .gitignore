@@ -39,6 +39,7 @@
 /build
 
 # misc
+.pnpm-store
 .DS_Store
 *.pem
 
